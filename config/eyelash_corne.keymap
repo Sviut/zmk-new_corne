@@ -5,68 +5,22 @@
 
 / {
     behaviors {
-        hr_a: home_row_alt {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp LALT>, <&kp A>;
-
+        HML: HML {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred"; // Предпочитать tap, если есть сомнения
         };
 
-        hr_r: home_row_gui {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp R>;
-
+        HMR: HMR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
-        };
-
-        hr_s: home_row_ctl {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp S>;
-
-            tapping-term-ms = <TAPPING_TERM>;
-        };
-
-        hr_t: home_row_shf {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp T>;
-
-            tapping-term-ms = <TAPPING_TERM>;
-        };
-
-        hr_n: home_row_shf_r {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp RSHFT>, <&kp N>;
-
-            tapping-term-ms = <TAPPING_TERM>;
-        };
-
-        hr_e: home_row_ctl_r {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp RCTRL>, <&kp E>;
-
-            tapping-term-ms = <TAPPING_TERM>;
-        };
-
-        hr_i: home_row_gui_r {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp RGUI>, <&kp I>;
-
-            tapping-term-ms = <TAPPING_TERM>;
-        };
-
-        hr_o: home_row_alt_r {
-            compatible = "zmk,behavior-mod-tap";
-            #binding-cells = <0>;
-            bindings = <&kp RALT>, <&kp O>;
-
-            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -75,11 +29,12 @@
 
         default_layer {
             display-name = "ColemakDH";
+
             bindings = <
-                &none  &kp Q  &kp W  &kp F    &kp P      &kp B      &kp J      &kp L     &kp U      &kp Y    &kp SEMI  &none
-                &none  &hr_a  &hr_r  &hr_s    &hr_t      &kp G      &kp M      &hr_n     &hr_e      &hr_i    &hr_o     &none
-                &none  &kp Z  &kp X  &kp C    &kp D      &kp V      &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &none
-                                     &kp ESC  &kp SPACE  &kp TAB    &kp ENTER  &kp BSPC  &kp DEL
+                &none  &kp Q      &kp W      &kp F          &kp P          &kp B             &kp J      &kp L      &kp U          &kp Y          &kp SEMI       &none
+                &none  &HML LALT A  &HML LGUI R  &HML LCTRL S   &HML LSHFT T   &kp G             &kp M      &HMR RSHFT N &HMR RCTRL E   &HMR RGUI I    &HMR RALT O    &none
+                &none  &kp Z      &kp X      &kp C          &kp D          &kp V             &kp K      &kp H      &kp COMMA      &kp DOT        &kp FSLH       &none
+                                               &kp ESC        &kp SPACE      &kp TAB           &kp ENTER  &kp BSPC     &kp DEL
             >;
         };
     };
