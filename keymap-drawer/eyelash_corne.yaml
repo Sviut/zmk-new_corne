@@ -1,53 +1,53 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
+  ColemakDH:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - E
-  - R
-  - T
-  - $$mdi:arrow-up-bold$$
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - B
+  - $$mdi:arrow-up-bold$$
+  - J
+  - L
+  - U
+  - Y
+  - {t: ;, s: ':'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td0'
   - A
+  - R
   - S
-  - D
-  - F
+  - T
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
+  - M
+  - N
+  - E
+  - I
+  - O
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
+  - D
   - V
-  - B
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - N
-  - M
+  - K
+  - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - LGUI
-  - QWERTY
-  - {t: '$$mdi:keyboard-space$$', h: QWERTY}
-  - {t: '$$mdi:keyboard-return$$', h: QWERTY}
-  - QWERTY
+  - ColemakDH
+  - {t: '$$mdi:keyboard-space$$', h: ColemakDH}
+  - {t: '$$mdi:keyboard-return$$', h: ColemakDH}
+  - ColemakDH
   - $$mdi:apple-keyboard-option$$
   '4':
   - {t: '$$mdi:transfer$$', type: trans}
@@ -98,6 +98,3 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [1, 15, 29]
-  k: '&soft_off'
