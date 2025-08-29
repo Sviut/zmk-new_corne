@@ -27,7 +27,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        ColemakDH {
             display-name = "ColemakDH";
 
             bindings = <
@@ -39,3 +39,4 @@
         };
     };
 };
+
