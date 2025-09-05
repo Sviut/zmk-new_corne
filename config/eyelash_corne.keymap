@@ -31,23 +31,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "COLEMAK_DH";
+        ALPHA {
             bindings = <
-&none  &kp Q       &kp W       &kp F        &kp P        &kp B                    &none         &kp J      &kp L          &kp U        &kp Y       &kp SQT     &none
-&none  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G             &none  &none  &none  &kp M      &mt RSHFT N    &mt RCTRL E  &mt RALT I  &mt RGUI O  &none
-&none  &kp Z       &kp X       &kp C        &kp D        &kp V    &none           &none         &kp K      &kp H          &kp COMMA    &kp PERIOD  &kp SLASH   &none
-                               &kp ESC      &kp SPACE    &kp TAB                                &kp ENTER  &kp BACKSPACE  &kp DELETE
-            >;
-        };
-
-        layer_2 {
-            display-name = "COLEMAK_DH";
-            bindings = <
-&none  &kp Q       &kp W       &kp E        &kp R        &kp T                   &none         &kp Y   &kp U        &kp I        &kp O       &kp P               &kp LBKT
-&none  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G            &none  &none  &none  &kp H   &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMICOLON  &kp SQT
-&none  &kp Z       &kp X       &kp C        &kp V        &kp B   &none           &none         &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH            &none
-                               &trans       &trans       &trans                                &trans  &trans       &trans
+&trans  &kp Q  &kp W  &kp E         &kp R             &kp T                     &trans          &kp Y      &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&trans  &kp A  &kp S  &kp D         &kp F             &kp G             &trans  &trans  &trans  &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&trans  &kp Z  &kp X  &kp C         &kp V             &kp B   &trans            &trans          &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mt RIGHT_SHIFT ENTER
+                      &kp LEFT_ALT  &kp LEFT_COMMAND  &trans                                    &kp SPACE  &trans  &trans
             >;
         };
     };
