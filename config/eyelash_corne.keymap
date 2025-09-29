@@ -33,10 +33,10 @@
 
         ALPHA {
             bindings = <
-&trans  &kp Q  &kp W  &kp F       &kp P        &kp B                      &trans          &kp J      &kp L     &kp U      &kp Y    &kp SEMI  &trans
-&trans  &kp A  &kp R  &kp S       &kp T        &kp G              &trans  &trans  &trans  &kp M      &kp N     &kp E      &kp I    &kp O     &trans
-&trans  &kp Z  &kp X  &kp C       &kp D        &kp V    &trans            &trans          &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH  &trans
-                      &kp ESCAPE  &lt 1 SPACE  &kp TAB                                    &kp ENTER  &kp BSPC  &kp DEL
+&kp TAB    &kp Q  &kp W  &kp F      &kp P     &kp B                       &trans          &kp J      &kp L      &kp U      &kp Y    &kp SEMI  &kp BSPC
+&kp ESC    &kp A  &kp R  &kp S      &kp T     &kp G               &trans  &trans  &trans  &kp M      &kp N      &kp E      &kp I    &kp O     &kp ENTER
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp D     &kp V     &trans            &trans          &kp K      &kp H      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                         &kp LCTRL  &kp LGUI  &kp LALT                                    &kp SPACE  &kp ENTER  &kp DEL
             >;
         };
 
