@@ -61,7 +61,7 @@ layers:
   - {t: V, h: '$$mdi:apple-keyboard-command$$'}
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - Sft+Gui+Z
+  - {t: Sft+Gui+Z, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-command$$
@@ -101,9 +101,9 @@ layers:
   SYM:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: <, h: toggle}
-  - {t: '=', h: toggle, s: +}
-  - {t: '>', h: toggle}
+  - <
+  - {t: '=', s: +}
+  - '>'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -115,15 +115,15 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: (, h: toggle}
-  - {t: '{', h: toggle}
-  - {t: '[', h: toggle, s: '{'}
+  - (
+  - '{'
+  - {t: '[', s: '{'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: ']', h: toggle, s: '}'}
-  - {t: '}', h: toggle}
-  - {t: ), h: toggle}
+  - {t: ']', s: '}'}
+  - '}'
+  - )
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
