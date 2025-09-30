@@ -34,7 +34,7 @@
         ALPHA {
             bindings = <
 &none      &kp Q           &kp W           &kp F        &kp P        &kp B                      &trans          &kp J        &kp L          &kp U       &kp Y   &kp SEMI  &none
-&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G              &trans  &trans  &trans  &mt RSHFT M  &mt RCTRL N    &mt RALT E  &mt RGUI I  &kp O     &none
+&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G              &trans  &trans  &trans  &kp M  &mt RSHFT N    &mt RCTRL E  &mt RALT I  &mt  RGUI O     &none
 &none  &kp Z           &kp X           &kp C        &kp D        &kp V    &trans            &trans          &kp K        &kp H          &kp COMMA   &kp DOT     &kp FSLH  &none
                                            &kp ESCAPE   &kp SPACE    &kp TAB                                    &kp ENTER    &kp BACKSPACE  &kp DEL
             >;
