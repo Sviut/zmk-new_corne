@@ -44,7 +44,7 @@
 
         NAV {
             bindings = <
-&trans  &trans        &trans    &trans     &trans          &trans                    &trans          &kp LG(Z)  &kp LG(V)  &kp LG(C)  &kp LG(X)     &kp LS(LG(Z))    &trans
+&trans  &trans        &trans    &trans     &trans          &trans                    &trans          &kp LG(Z)  &kp LG(V)  &kp LG(C)  &kp LG(X)     &kt LS(LG(Z))    &trans
 &trans  &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LEFT_SHIFT  &trans            &trans  &trans  &trans  &kp CLCK   &kp LEFT   &kp DOWN   &kp UP_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans        &trans    &trans     &trans          &trans  &trans            &trans          &trans     &trans     &trans     &trans        &trans           &trans
                                 &trans     &trans          &trans                                    &trans     &trans     &trans
@@ -55,8 +55,8 @@
 
         SYM {
             bindings = <
-&none  &none  &kt LESS_THAN  &kt EQUAL             &kt GREATER_THAN  &none                             &none         &none              &none            &none                  &none  &none  &none
-&none  &none  &none          &kt LEFT_PARENTHESIS  &kt LEFT_BRACE    &kt LEFT_BRACKET           &none  &none  &none  &kt RIGHT_BRACKET  &kt RIGHT_BRACE  &kt RIGHT_PARENTHESIS  &none  &none  &none
+&none  &none  &kp LESS_THAN  &kp EQUAL             &kp GREATER_THAN  &none                             &none         &none              &none            &none                  &none  &none  &none
+&none  &none  &none          &kp LEFT_PARENTHESIS  &kp LEFT_BRACE    &kp LEFT_BRACKET           &none  &none  &none  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none  &none  &none
 &none  &none  &none          &none                 &none             &none             &none           &none         &none              &none            &none                  &none  &none  &none
                              &none                 &none             &none                                           &none              &none            &none
             >;
