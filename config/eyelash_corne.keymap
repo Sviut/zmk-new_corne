@@ -33,10 +33,10 @@
 
         COLEMK {
             bindings = <
-&none  &kp Q           &kp W           &kp F        &kp P        &kp B                      &trans          &kp J      &kp L          &kp U        &kp Y       &kp SEMI    &none
-&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G              &trans  &trans  &trans  &kp M      &mt RSHFT N    &mt RCTRL E  &mt RALT I  &mt RGUI O  &none
-&none  &kp Z           &kp X           &kp C        &kp D        &kp V    &trans            &trans          &kp K      &kp H          &kp COMMA    &kp DOT     &kp FSLH    &none
-                                       &kp ESCAPE   &lt 1 SPACE  &kp TAB                                    &kp ENTER  &kp BACKSPACE  &kp DEL
+&none  &kp Q           &kp W           &kp F        &kp P        &kp B                      &trans          &kp J        &kp L          &kp U        &kp Y       &kp SEMI    &none
+&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G              &trans  &trans  &trans  &kp M        &mt RSHFT N    &mt RCTRL E  &mt RALT I  &mt RGUI O  &none
+&none  &kp Z           &kp X           &kp C        &kp D        &kp V    &trans            &trans          &kp K        &kp H          &kp COMMA    &kp DOT     &kp FSLH    &none
+                                       &kp ESCAPE   &lt 1 SPACE  &kp TAB                                    &lt 2 ENTER  &kp BACKSPACE  &kp DEL
             >;
 
             label = "COLEMK";
@@ -55,10 +55,10 @@
 
         SYM {
             bindings = <
-&none  &none  &none  &none                 &kt EQUAL       &kt GREATER_THAN                  &none         &none              &none            &none                  &none  &none  &none
-&none  &none  &none  &kt LEFT_PARENTHESIS  &kt LEFT_BRACE  &kt LEFT_BRACKET           &none  &none  &none  &kt RIGHT_BRACKET  &kt RIGHT_BRACE  &kt RIGHT_PARENTHESIS  &none  &none  &none
-&none  &none  &none  &none                 &none           &none             &none           &none         &none              &none            &none                  &none  &none  &none
-                     &none                 &none           &none                                           &none              &none            &none
+&none  &none  &kt LESS_THAN  &kt EQUAL             &kt GREATER_THAN  &none                             &none         &none              &none            &none                  &none  &none  &none
+&none  &none  &none          &kt LEFT_PARENTHESIS  &kt LEFT_BRACE    &kt LEFT_BRACKET           &none  &none  &none  &kt RIGHT_BRACKET  &kt RIGHT_BRACE  &kt RIGHT_PARENTHESIS  &none  &none  &none
+&none  &none  &none          &none                 &none             &none             &none           &none         &none              &none            &none                  &none  &none  &none
+                             &none                 &none             &none                                           &none              &none            &none
             >;
 
             label = "SYM";
