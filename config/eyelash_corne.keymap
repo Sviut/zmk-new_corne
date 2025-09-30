@@ -44,7 +44,7 @@
 
         NAV {
             bindings = <
-&trans  &trans        &trans    &trans     &trans          &trans                    &trans          &kt RG(Z)  &kt LG(V)  &kp LG(C)  &kt LG(X)     &kt LG(LS(Z))    &trans
+&trans  &trans        &trans    &trans     &trans          &trans                    &trans          &kp LG(Z)  &kp LG(V)  &kp LG(C)  &kp LG(X)     &kp LS(LG(Z))    &trans
 &trans  &kp LEFT_GUI  &kp LALT  &kp LCTRL  &kp LEFT_SHIFT  &trans            &trans  &trans  &trans  &kp CLCK   &kp LEFT   &kp DOWN   &kp UP_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans        &trans    &trans     &trans          &trans  &trans            &trans          &trans     &trans     &trans     &trans        &trans           &trans
                                 &trans     &trans          &trans                                    &trans     &trans     &trans
