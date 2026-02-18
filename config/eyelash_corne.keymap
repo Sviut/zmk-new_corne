@@ -1,25 +1,16 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
-&mt {
+&lt {
     tapping-term-ms = <200>;
     quick-tap-ms = <150>;
-    hold-trigger-on-release;
     flavor = "balanced";
 };
 
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -32,21 +23,52 @@
     keymap {
         compatible = "zmk,keymap";
 
-        ALPHA {
+        // ┌──────┬───┬───┬───┬───┬───┐                 ┌───┬───┬───┬───┬───┬──────┐
+        // │ TAB  │ Q │ W │ E │ R │ T │                 │ Y │ U │ I │ O │ P │ BSPC │
+        // │ CTRL │ A │ S │ D │ F │ G │                 │ H │ J │ K │ L │ ; │  '   │
+        // │ SHFT │ Z │ X │ C │ V │ B │                 │ N │ M │ , │ . │ / │ SHFT │
+        // └──────┴───┴───┼───┼───┼───┤                 ├───┼───┼───┼───┴───┴──────┘
+        //                │GUI│ALT│SPC│                 │ENT│BSP│DEL│
+        //                │   │   │SYM│                 │NAV│   │   │
+        //                └───┴───┴───┘                 └───┴───┴───┘
+        BASE {
             bindings = <
-&kp ESCAPE      &kp Q       &kp W       &kp E        &kp R         &kp T                      &trans          &kp Y      &kp U         &kp I        &kp O       &kp P          &kp BSPC
-&kp TAB         &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G              &trans  &trans  &trans  &kp H      &mt RSHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &bl BL_TOG
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C        &kp V         &kp B    &trans            &trans          &kp N      &kp M         &kp COMMA    &kp DOT     &kp FSLH       &mt RIGHT_SHIFT ENTER
-                                        &kp ESCAPE   &kp SPACE     &kp TAB                                    &kp ENTER  &kp BSPC      &kp DEL
+&kp TAB    &kp Q  &kp W  &kp E     &kp R     &kp T   &trans                   &kp Y        &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F     &kp G   &trans  &trans  &trans   &kp H        &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V     &kp B   &trans  &trans           &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                          &kp LGUI  &kp LALT  &lt 1 SPACE                      &lt 2 ENTER  &kp BSPC  &kp DEL
             >;
         };
 
+        // ┌─────┬───┬───┬───┬───┬───┐                 ┌───┬───┬───┬───┬───┬─────┐
+        // │ ESC │ ! │ @ │ # │ { │ } │                 │ 7 │ 8 │ 9 │ ( │ ) │     │
+        // │     │ _ │ + │ = │ [ │ ] │                 │ 4 │ 5 │ 6 │ * │ - │     │
+        // │     │ ~ │ ` │ \ │ | │ & │                 │ 1 │ 2 │ 3 │ 0 │ . │     │
+        // └─────┴───┴───┼───┼───┼───┤                 ├───┼───┼───┼───┴───┴─────┘
+        //               │   │   │███│                 │ENT│BSP│DEL│
+        //               └───┴───┴───┘                 └───┴───┴───┘
+        SYM {
+            bindings = <
+&kp ESC  &kp EXCL   &kp AT    &kp HASH  &kp LBRC  &kp RBRC   &trans                   &kp N7  &kp N8    &kp N9  &kp LPAR   &kp RPAR   &trans
+&trans   &kp UNDER  &kp PLUS  &kp EQUAL &kp LBKT  &kp RBKT   &trans  &trans  &trans   &kp N4  &kp N5    &kp N6  &kp ASTRK  &kp MINUS  &trans
+&trans   &kp TILDE  &kp GRAVE &kp BSLH  &kp PIPE  &kp AMPS   &trans  &trans           &kp N1  &kp N2    &kp N3  &kp N0     &kp DOT    &trans
+                              &trans    &trans     &trans                               &kp ENTER  &kp BSPC  &kp DEL
+            >;
+        };
+
+        // ┌────┬────┬────┬────┬────┬──────┐                 ┌──────┬──────┬──────┬──────┬────┬────┐
+        // │ F1 │ F2 │ F3 │ F4 │ F5 │  F6  │                 │  F7  │  F8  │  F9  │ F10  │F11 │F12 │
+        // │    │PREV│NEXT│VOL-│VOL+│ PLAY │                 │ LEFT │ DOWN │  UP  │RIGHT │    │    │
+        // │    │BCLR│BNXT│BPRV│    │      │                 │ HOME │ PGDN │ PGUP │  END │    │    │
+        // └────┴────┴────┼────┼────┼──────┤                 ├──────┼──────┼──────┼──────┴────┴────┘
+        //                │    │    │ SPC  │                 │ ████ │ BSP  │ DEL  │
+        //                └────┴────┴──────┘                 └──────┴──────┴──────┘
         NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans    &kp UP    &kp PG_UP  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans    &trans
+&kp F1  &kp F2      &kp F3      &kp F4       &kp F5       &kp F6      &trans                   &kp F7    &kp F8    &kp F9    &kp F10    &kp F11  &kp F12
+&trans  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN &kp C_VOL_UP &kp C_PP   &trans  &trans  &trans   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans   &trans
+&trans  &bt BT_CLR  &bt BT_NXT  &bt BT_PRV   &trans       &trans      &trans  &trans           &kp HOME  &kp PG_DN &kp PG_UP &kp END    &trans   &trans
+                                &trans        &trans        &kp SPACE                            &trans    &kp BSPC  &kp DEL
             >;
         };
     };
